@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-bar {
+    margin: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 370px;
+}
+
+.search-bar button {
+    padding: 8px;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    padding: 50px;
+    color: white;
+}
+
+.btn {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.products {
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+}
+
+button {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    padding: 50px;
+    color: black; /* Change text color to black */
+    text-align: center;
+}
+
+.hero h2, .hero p {
+    color: black;
+
+.btn {
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+}
