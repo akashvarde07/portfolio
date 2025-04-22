@@ -3,78 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Gift Store - GiftHub</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to GiftHub</h1>
+    <div class="container">
+        <h1>Task Manager</h1>
         
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#cart">Cart</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-        </nav>
-
-        
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search gifts..." onkeyup="searchProducts()">
-            <button onclick="searchProducts()">🔍</button>
+        <div class="task-form">
+            <h2>Add New Task</h2>
+            <form id="add-task-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn">Add Task</button>
+            </form>
         </div>
-    </header>
 
-    <section id="home" class="hero">
-        <h2>Find the Perfect Gift for Every Occasion</h2>
-        <p>Explore our wide range of gifts for your loved ones.</p>
-        <a href="#products" class="btn">Shop Now</a>
-    </section>
-    
-    <section id="products" class="products">
-        <h2>Featured Gifts</h2>
-        <div class="product-list">
-            <div class="product">
-                <img src="image1.src.png" alt="Birthday Card">
-                <h3>Birthday Card</h3>
-                <p>₹1,299</p>
-                <button onclick="addToCart('Birthday Card', 1299)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="image2.src.png" alt="Personalized Mug">
-                <h3>Personalized Mug</h3>
-                <p>₹399</p>
-                <button onclick="addToCart('Personalized Mug', 399)">Add to Cart</button>
-            </div>
-            
-            <div class="product">
-                <img src="imag3.src.png" alt="Rotating Lamp">
-                <h3>Customized Rotating Lamp</h3>
-                <p>₹799</p>
-                <button onclick="addToCart('Rotating Lamp', 799)">Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="image4.src.png" alt="Gift Box">
-                <h3>Customised Men’s Combo Hamper</h3>
-                <p>₹1899</p>
-                <button onclick="addToCart('Gift Box', 999)">Add to Cart</button>
+        <div class="task-list">
+            <h2>Tasks</h2>
+            <div id="tasks-container"></div>
+        </div>
+
+        <!-- Edit Task Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Task</h2>
+                <form id="edit-task-form">
+                    <input type="hidden" id="edit-id">
+                    <div class="form-group">
+                        <label for="edit-title">Title:</label>
+                        <input type="text" id="edit-title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-description">Description:</label>
+                        <textarea id="edit-description" name="description" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Update Task</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="cart" class="cart">
-        <h2>Shopping Cart</h2>
-        <ul id="cart-items"></ul>
-        <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
-        <button onclick="checkout()">Checkout</button>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 GiftHub. All Rights Reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
